@@ -1,0 +1,98 @@
+<ion-view ng-controller="homeCtrl">
+    <ion-content>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="tel" ng-model="value" placeholder="Enter value here">
+            </label>
+        </div>
+        <div class="tableDiv" ng-if="value>0">
+            <table>
+                <thead>
+                    <tr>
+                        <th>-50%</th>
+                        <th>X</th>
+                        <th>Entry</th>
+                        <th>T1</th>
+                        <th>T2</th>
+                        <th>T3</th>
+                        <th>T4</th>
+                        <th>T5</th>
+                        <th>T6</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{(value/2 - (value/2 * 50)/100) | number : 3}}</td>
+                        <td>X/2</td>
+                        <td>{{value/2 | number : 3}}</td>
+                        <td>{{(value/2 + (value/2 * 50)/100) | number : 3}}</td>
+                        <td>{{(value/2 + (value/2 * 100)/100) | number : 3}}</td>
+                        <td>{{(value/2 + (value/2 * 200)/100) | number : 3}}</td>
+                        <td>{{(value/2 + (value/2 * 300)/100) | number : 3}}</td>
+                        <td>{{(value/2 + (value/2 * 400)/100) | number : 3}}</td>
+                        <td>{{(value/2 + (value/2 * 500)/100) | number : 3}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{(value/3 - (value/3 * 50)/100) | number : 3}}</td>
+                        <td>X/3</td>
+                        <td>{{value/3 | number : 3}}</td>
+                        <td>{{(value/3 + (value/3 * 50)/100) | number : 3}}</td>
+                        <td>{{(value/3 + (value/3 * 100)/100) | number : 3}}</td>
+                        <td>{{(value/3 + (value/3 * 200)/100) | number : 3}}</td>
+                        <td>{{(value/3 + (value/3 * 300)/100) | number : 3}}</td>
+                        <td>{{(value/3 + (value/3 * 400)/100) | number : 3}}</td>
+                        <td>{{(value/3 + (value/3 * 500)/100) | number : 3}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{(value/5 - (value/5 * 50)/100) | number : 3}}</td>
+                        <td>X/5</td>
+                        <td>{{value/5 | number : 3}}</td>
+                        <td>{{(value/5 + (value/5 * 50)/100) | number : 3}}</td>
+                        <td>{{(value/5 + (value/5 * 100)/100) | number : 3}}</td>
+                        <td>{{(value/5 + (value/5 * 200)/100) | number : 3}}</td>
+                        <td>{{(value/5 + (value/5 * 300)/100) | number : 3}}</td>
+                        <td>{{(value/5 + (value/5 * 400)/100) | number : 3}}</td>
+                        <td>{{(value/5 + (value/5 * 500)/100) | number : 3}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{(value/8 - (value/8 * 50)/100) | number : 3}}</td>
+                        <td>X/8</td>
+                        <td>{{value/8 | number : 3}}</td>
+                        <td>{{(value/8 + (value/8 * 50)/100) | number : 3}}</td>
+                        <td>{{(value/8 + (value/8 * 100)/100) | number : 3}}</td>
+                        <td>{{(value/8 + (value/8 * 200)/100) | number : 3}}</td>
+                        <td>{{(value/8 + (value/8 * 300)/100) | number : 3}}</td>
+                        <td>{{(value/8 + (value/8 * 400)/100) | number : 3}}</td>
+                        <td>{{(value/8 + (value/8 * 500)/100) | number : 3}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{(value/11 - (value/11 * 50)/100) | number : 3}}</td>
+                        <td>X/11</td>
+                        <td>{{value/11 | number : 3}}</td>
+                        <td>{{(value/11 + (value/11 * 50)/100) | number : 3}}</td>
+                        <td>{{(value/11 + (value/11 * 100)/100) | number : 3}}</td>
+                        <td>{{(value/11 + (value/11 * 200)/100) | number : 3}}</td>
+                        <td>{{(value/11 + (value/11 * 300)/100) | number : 3}}</td>
+                        <td>{{(value/11 + (value/11 * 400)/100) | number : 3}}</td>
+                        <td>{{(value/11 + (value/11 * 500)/100) | number : 3}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{(value/21 - (value/21 * 50)/100) | number : 3}}</td> 
+                        <td>X/21</td>
+                        <td>{{value/21 | number : 3}}</td>
+                        <td>{{(value/21 + (value/21 * 50)/100) | number : 3}}</td>
+                        <td>{{(value/21 + (value/21 * 100)/100) | number : 3}}</td>
+                        <td>{{(value/21 + (value/21 * 200)/100) | number : 3}}</td>
+                        <td>{{(value/21 + (value/21 * 300)/100) | number : 3}}</td>
+                        <td>{{(value/21 + (value/21 * 400)/100) | number : 3}}</td>
+                        <td>{{(value/21 + (value/21 * 500)/100) | number : 3}}</td>
+                    </tr>
+                </tbody> 
+            </table>
+        </div>
+        <div class="greetingDiv" ng-if="!value">
+           <h5>Welcome Sandeep... {{greeting}}  </h5>
+        </div>
+    </ion-content>
+</ion-view>
