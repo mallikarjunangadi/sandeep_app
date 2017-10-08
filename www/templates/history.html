@@ -1,0 +1,18 @@
+<ion-view ng-controller="historyCtrl">
+    <ion-header-bar align-title="left">
+        <div class="buttons">
+            <button class="button button-icon ion-arrow-left-c" ng-click="goBack()"></button>
+        </div>
+        <h1 style="text-align:center" class="title">History</h1>
+    </ion-header-bar> 
+    <ion-content>
+        <div class="list">
+            <a class="item" ng-click="viewData(key.keyDate)" ng-repeat="key in localKeyArr track by key.keyDate">
+             {{$index + 1}}  :   {{key.name}} --> {{key.keyDate | date: "MMM dd, y h:mm:ss a"}}
+            </a>
+        </div>
+        <div class="greetingDiv" ng-if="!localKeyArr[0]">
+            <h5>No history found</h5>
+        </div>
+    </ion-content>
+</ion-view>
